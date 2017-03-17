@@ -42,16 +42,3 @@ namespace MixedNumbers
         }
     }
 }
-//input:
-//14284124 : Alex
-//Gosho : 088423123
-//Ivan : 412048192
-//123123123 : Nanyo
-//Pesho : 150925812
-//Over
-//    output:
-//    Alex -> 14284124
-//Gosho -> 88423123
-//Ivan -> 412048192
-//Nanyo -> 123123123
-//Pesho -> 150925812
