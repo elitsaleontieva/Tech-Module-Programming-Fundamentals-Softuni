@@ -19,7 +19,7 @@ namespace PyramidVolume
 			height = double.Parse(Console.ReadLine());
 			
 			double volume = (length * width * height) / 3;
-C		onsole.WriteLine("Pyramid Volume: {0:F2}", volume); 
+			Console.WriteLine("Pyramid Volume: {0:F2}", volume); 
 		}
 	}
 }
