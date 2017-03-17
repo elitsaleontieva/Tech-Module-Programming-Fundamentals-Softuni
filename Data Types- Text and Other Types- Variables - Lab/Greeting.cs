@@ -1,14 +1,7 @@
-﻿/*
- * Created by SharpDevelop.
- * User: Eli
- * Date: 1/29/2017
- * Time: 12:57 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
+
 using System;
 
-namespace sss
+namespace Greeting
 {
 	class Program
 	{
