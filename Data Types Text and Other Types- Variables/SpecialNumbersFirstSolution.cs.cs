@@ -1,7 +1,7 @@
 
 using System;
 
-namespace specialNumbersFirstSolution.cs
+namespace SpecialNumbersFirstSolution.cs
 {
     class Program
     {
