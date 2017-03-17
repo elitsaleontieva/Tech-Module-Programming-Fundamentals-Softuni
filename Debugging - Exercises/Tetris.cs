@@ -2,7 +2,7 @@ using System;
 
 
 
-namespace MiningCoins
+namespace Tetris
 {
     class Program
     {
