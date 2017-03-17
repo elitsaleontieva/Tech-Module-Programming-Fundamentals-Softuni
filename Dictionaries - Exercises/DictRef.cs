@@ -17,16 +17,14 @@ namespace DictRef
 
             while (line != "end")
             {
-                //In case you are given a name and a value, you must store the given name and its value.
-                //If the name already EXISTS, you must CHANGE its value with the given one.
+               
                 var split = line.Split();
 
                 var firstElement = split[0];
                 var lastElement = split[split.Length - 1];
 
                 var number = 0;
-                //In case you are given a name and a second name, you must store the given name with the same value as the value of the second name. 
-                //If the given second name DOES NOT exist, you must IGNORE that input.
+                
                 if (int.TryParse(lastElement, out number))
                 {
                     resultDict[firstElement] = number;
