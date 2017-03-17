@@ -1,14 +1,7 @@
-﻿/*
- * Created by SharpDevelop.
- * User: Eli
- * Date: 1/29/2017
- * Time: 1:18 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
+
 using System;
 
-namespace dddddddddd
+namespace PyramidVolume
 {
 	class Program
 	{
