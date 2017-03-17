@@ -1,11 +1,4 @@
-﻿/*
- * 
- * 
- * 
- * 
- * 
- * 
- */
+
 using System;
 
 namespace CamelsBack
@@ -14,9 +7,9 @@ namespace CamelsBack
 	{
 		public static void Main(string[] args)
 		{
-			var n = Console.ReadLine().Split().Select(int.Parse).ToList(); //buildings
+			var n = Console.ReadLine().Split().Select(int.Parse).ToList();
  
-            var m = int.Parse(Console.ReadLine()); //sizle
+            var m = int.Parse(Console.ReadLine()); 
  				
 			int rounds=0;
             while ( n.Count>m)
