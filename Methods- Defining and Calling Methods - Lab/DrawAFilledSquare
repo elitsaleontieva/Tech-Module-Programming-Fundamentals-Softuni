@@ -1,0 +1,35 @@
+using System;
+
+
+namespace DrawAFilledSquare
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            PrintHeader(n);
+            PrintMidle(n);
+            PrintHeader(n);
+
+        }
+        static void PrintHeader(int n)
+        {
+            Console.WriteLine(new string('-', 2 * n));
+        }
+        static void PrintMidle(int n)
+        {
+            for (int i = 0; i < n - 2; i++)
+            {
+                Console.Write("-");
+                for (int q = 0; q < n - 1; q++)
+                {
+                    Console.Write(@"\/");
+                }
+                Console.Write("-");
+                Console.WriteLine();
+            }
+        }
+    }
+}
