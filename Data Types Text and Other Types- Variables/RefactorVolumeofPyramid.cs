@@ -1,7 +1,7 @@
 
 using System;
 
-namespace PyramidVolume
+namespace RefactorVolumeofPyramid
 {
     class Program
     {
