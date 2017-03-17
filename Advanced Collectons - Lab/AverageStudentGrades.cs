@@ -10,7 +10,7 @@ namespace AverageStudentGrades
     {
         static void Main(string[] args)
         {
-            var grades = new Dictionary<string, List<double>>();
+           var grades = new Dictionary<string, List<double>>();
 
             var n = int.Parse(Console.ReadLine());
             for (int i = 0; i < n; i++)
