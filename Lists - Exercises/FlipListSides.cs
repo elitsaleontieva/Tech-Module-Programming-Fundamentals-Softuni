@@ -1,14 +1,4 @@
-﻿/*
- * You will receive an integer list on the first line of the input (space-separated). 
-* Leave the first, middle and last elements as they are. For every other element, 
-* exchange it with its opposite indexed element (list[1]  list[length-2] and so on…).
-* After that, print the list on the console (space-separated).
- * 
- * 
- * 
- * 
- * 
- */
+
 using System;
 using System.Collections.Generic;	
 using System.Linq;
