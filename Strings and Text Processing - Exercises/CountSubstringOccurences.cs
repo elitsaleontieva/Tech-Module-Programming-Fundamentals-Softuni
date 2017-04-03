@@ -17,10 +17,11 @@ namespace CountSubstringOccurences
             var count = 0;
             for(int i=0; i<input.Length; i++)
             {
-                if (indexOf != -1) {
+                if (indexOf != -1) 
+                {
                     indexOf = (input.IndexOf(pattern, indexOf + 1));
 
-                count++;
+                    count++;
                 }
             }
 
