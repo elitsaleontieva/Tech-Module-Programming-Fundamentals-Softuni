@@ -21,8 +21,9 @@ namespace TextFilter
                     {
                         input = input.Replace(banned, new String('*', banned.Length));
                     }
-                    }
+                 }
             }
+            
             Console.WriteLine(input);
         }
     }
