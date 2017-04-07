@@ -1,34 +1,32 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-
-namespace LargestElementinArray
-
+namespace arrays
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            int stringArray = int.Parse(Console.ReadLine());
-
+            var stringArray = int.Parse(Console.ReadLine());
             var array = new int[stringArray];
 
+            var largestElement = int.MinValue;
             for (int i = 0; i < array.Length; i++)
-
+            {
                 array[i] = int.Parse(Console.ReadLine());
 
-
-
-            int smallestNumber = int.MinValue;
-
-            for (int i = 0; i < array.Length; i++)
-
-                if (array[i] > smallestNumber)
-                {   
-                    smallestNumber = array[i];
-
+                if (array[i] > largestElement)
+                {
+                    largestElement = array[i];
+                   
                 }
-            Console.WriteLine(smallestNumber); 
+
+            }
+            Console.WriteLine(largestElement);
+
         }
     }
 }
