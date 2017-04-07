@@ -1,24 +1,27 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-
-namespace OddNumbersatOddPositions
-
+namespace arrays
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            for (int i = 0; i < numbers.Length; i++)
+            var array = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
+
+            var count = 0;
+
+            for (int i = 0; i < array.Length; i++)
             {
-                if (i % 2 == 1 && Math.Abs(numbers[i] % 2) == 1)
+                if (array[i] % 2!=0)
                 {
-                    Console.WriteLine("Index {0} -> {1}", i, numbers[i]);
-
-
+                    count++;
                 }
             }
+            Console.WriteLine(count);
         }
     }
 }
