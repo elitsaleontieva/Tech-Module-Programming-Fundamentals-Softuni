@@ -1,45 +1,38 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArrayContainsElement
+namespace ConsoleApplication23
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var array = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            var n = int.Parse(Console.ReadLine());
+            var array = Console.ReadLine().Split().ToArray();
+            var element = Console.ReadLine();
 
-            var contains = false;
-
+            var isFound = false;
 
             for (int i = 0; i < array.Length; i++)
             {
-
-
-
-                if (array[i] == n)
+                if (array[i] == element)
                 {
-
-                    contains = true;
-                    break;
+                    isFound = true;
                 }
-
+              
             }
-            if (contains)
+            if (isFound == true)
             {
                 Console.WriteLine("yes");
-
             }
             else
             {
                 Console.WriteLine("no");
-
-
             }
         }
+       
+
+        }
     }
-}
