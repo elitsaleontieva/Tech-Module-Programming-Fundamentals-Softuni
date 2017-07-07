@@ -12,42 +12,81 @@ namespace ConsoleApplication68
         static void Main(string[] args)
         {
 
+            var participantList = Console.ReadLine().Split(',').Select(x => x.Trim()).ToList();
 
-            var timeToLeave = Console.ReadLine(); // HH: mm: ss
-            var chars = ":".ToCharArray();
-            var arr = timeToLeave.Split(chars, StringSplitOptions.RemoveEmptyEntries).ToArray();
+            var songList = Console.ReadLine().Split(',').Select(x => x.Trim()).ToList();
 
-            var numOfStepsToHome = int.Parse(Console.ReadLine()) % 86400;
-            var timeForStep = int.Parse(Console.ReadLine()) % 86400;
+            var input = Console.ReadLine();
 
-            var totalTime = (numOfStepsToHome * timeForStep) % 86400;
-            var hours = (int.Parse(arr[0]) * 3600) % 86400;
-            var minutes = (int.Parse(arr[1]) * 60 )%86400;
-            var seconds = int.Parse(arr[2]) % 86400;
-            var secondsTotal =( hours + minutes + seconds + totalTime) % 86400;
-            TimeSpan t = TimeSpan.FromSeconds(secondsTotal);
-           
-            
-            var hours1 = (int)t.TotalHours;
-            var minutes1 = t.Minutes;
-            var seconds1 = t.Seconds;
-           
-                Console.Write("Time Arrival: ");
-                Console.WriteLine("{0:D2}:{1:D2}:{2:D2}",
-                  ((int)t.TotalHours),
-                  (t.Minutes),
-                  (t.Seconds));
-          
+            var dictionary = new Dictionary<string, List<string>>();
+
+
+
+            while (input != "Dawn" && input != "dawn")
+            {
+                var participantSongAward = input.Split(',').Select(x => x.Trim()).ToList(); 
+
+                var participant = participantSongAward[0];
+                var song = participantSongAward[1];
+                var award = participantSongAward[2];
+
+
+                if (participantList.Contains(participant) && songList.Contains(song))
+                {
+
+                    if (!dictionary.ContainsKey(participant))
+                    {
+
+                        dictionary[participant] = new List<string>();
+                    }
+
+                    if (!dictionary[participant].Contains(award))
+                    {
+                        dictionary[participant].Add(award);
+                    }
+                    
+
+                }
+
+
+
+                input = Console.ReadLine();
             }
 
+            if (dictionary.Any())
+            {
+
+
+                foreach (var item in dictionary.OrderByDescending(x => x.Value.Count).ThenBy(z => z.Key))
+                {
+                    if (item.Key.Any())
+                    {
+
+                        Console.WriteLine($"{item.Key}: {item.Value.Distinct().Count()} awards");
+                        foreach (var item1 in item.Value.Distinct().OrderBy(x => x))
+                        {
+                            Console.WriteLine($"--{item1}");
+                        }
+                    }
+
+
+
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("No awards");
+            }
 
 
 
         }
 
 
-    
 
-
-
+    }
 }
+
+
+
